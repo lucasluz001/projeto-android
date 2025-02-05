@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url("../fontes/idroid.otf") format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    /* Variaveis atribuidas para as cores */
+    --cor0:#ebe5c5;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+    /* Variaveis atribuidas para as fontes */
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', 'cursive';
+    --fonte-android: 'Android', 'cursive';
+}
+
+
+* {
+    /* Tira o margin e padding de todos os elementos */
+    margin:0px;
+    padding: 0px;
+}
+
+
+/* Altera cor de fundo e fonte do body*/
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+/* Adiciona um emoji de link no final do link*/
+a.externo::after {
+    content: '\00a0\1F517';
+}
+
+/* Altera a cor de fundo de header */
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5) );
+    /* Define altura mínima do header*/
+    min-height: 150px;
+    text-align: center;
+    /* Espaço do topo do site */
+    padding-top: 40px;
+}
+
+/* Altera a cor e fonte de header h1 */
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    /* Espaço embaixo do título*/
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    
+}
+/* Altera a cor e fonte de p */
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    /* Largura máxima de p*/
+    max-width: 600px;
+    /* Preenchimento de 10 pra esquerda e pra direita */
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Altera a cor de nav*/
+nav {
+    background-color: var(--cor5);
+    /* Aumenta o preenchimento em 10 pra cada lado */
+    padding: 10px;
+    text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
+}
+
+/* Altera cor, preenchimento, borda, peso e decoração da fonte */ 
+nav > a {
+    color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition-duration: .6s ;
+}
+
+/* Ao passar o mouse sobre os elementos a de nav muda de cor */
+nav > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+main {
+    /* Largura mínima e máxima */
+    min-width: 300px;
+    max-width: 1000px;
+    /* Alinha ao centro e aumenta a borda de baixo em 30 */
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.507);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Altera fonte e cor do h1 */
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+/* Altera fonte e cor do h2 */
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+    
+}
+
+main p {
+    /* Insere uma margem de cima e de baixo nos p*/
+    margin: 15px 0px;
+    text-align: justify;
+    /* Adiciona um recuo no texto */
+    text-indent: 30px;
+    font-size: 1em;
+    /* Altura da linha*/
+    line-height: 2em;
+}
+
+/* Configuração das tags strong */
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+
+}
+
+/* Configuração de cor e fonte dos links*/
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+/* Muda a cor e decoração do texto ao passar o mouse sobre o link */
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+/* A imagem acompanha a largura da tela */
+main img {
+    width: 100%;
+}
+
+/* Classe criada para ajustar o tamanho da imagem "bugdroid" deixando menor em menores resoluções */
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    background-color: var(--cor5);
+    /* Aumenta o tamanho da div na esquerda e direita até encostar no article e em baixo em 30 */
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    /* Insere 90% de altura e largura para o iframe */
+    width: 90%;
+    height: 90%;
+}
+
+/* Configuração do aside*/
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.295);
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    /* A margem aumenta 10 pra cima 10 pra direita, 0 pra baixo e 10 pra esquerda */
+    margin: -10px -10px 0px -10px;
+    /* Arredonda em 10 em cima na esquerda e 10 em cima e na direita */
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+/* Configuração da ul do aside */
+aside > ul {
+    /* Muda o ícone da lista */
+    list-style-type: '\2714\00a0\00a0'; /* \2714 é o icone e \00a0 é o espaço em branco*/
+    /* Posição da lista */
+    list-style-position: inside;
+    /* Quantidade de colunas da lista ul */
+    columns: 2;
+}
+
+/* Altera a cor de fundo e de fonte de footer */
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+/* Configuração dos links do rodapé*/
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/* Ao passar o mouse pelo link de footer altera cor e decoração*/
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
