@@ -6,7 +6,7 @@ Projeto do segundo módulo do curso de HTML e CSS do [Gustavo Guanabara](https:/
 
 <p>Para visualizar o projeto com mais detalhes acesse o link abaixo:</p>
 
-[https://lucasluz001.github.io/projeto-android/index.html](https://lucasluz001.github.io/projeto-android/index.html)
+[https://lucasluz001.github.io/projeto-android/](https://lucasluz001.github.io/projeto-android/)
 
 <p>Se quiser assistir as aulas do curso no qual eu me baseei para desenvolver este site, acesse o link:</p>
 
